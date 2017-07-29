@@ -1,19 +1,27 @@
 {
-"name": "hello world",
-"version": "0.0.1",
-"manifest_version": 2,
-"description":"はじめてのchrome_extension",
-"permissions":[
-"tabs"
-],
-"background":{
-	"scripts": ["background.js"]
-},
-"page_action":{
-	"default_icon": "icons/icon19.png",
-	"default_title": "hello!"
-},
-"icons": {
-	"128":"icons/muscle.jpg"
-}
+	"name": "URLを保存するよ:)",
+	"version": "0.0.3",
+	"manifest_version": 2,
+	"description":"chromeで現在開いているタブの「URL」と「タイトル」を取得しクリップボードに保存する",
+	"permissions":[
+		"tabs", "clipboardWrite"
+	],
+	"background":{
+		"scripts": ["background.js"]
+	},
+	"page_action":{
+		"default_icon": "icons/icon19.png",
+		"default_title": "get tabs url!"
+	},
+	"icons": {
+		"128":"icons/icon128.jpg"
+	},
+	"commands": {
+		"EventName": {
+			"suggested_key": {
+				"default": "Alt+C"
+			},
+			"description": "shortcut"
+		}
+	}
 }
